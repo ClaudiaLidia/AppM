@@ -1,16 +1,124 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+
     <HorizontalScrollView
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
         android:id="@+id/horizontalScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal">
-    <ImageView
-        android:layout_width="800dp"
-        android:layout_height="670dp"
-        android:background="@drawable/map"/>
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        <ImageView
+                android:id="@+id/ivmap"
+                android:layout_width="800dp"
+                android:layout_height="670dp"
+                android:background="@drawable/map" />
+
+            <ImageButton
+                android:id="@+id/bone"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="430dp"
+                android:layout_marginStart="430dp"
+                android:layout_marginTop="352dp"
+                android:background="@drawable/bgreen"
+                app:layout_constraintEnd_toStartOf="@+id/ivmap"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/ivmap"
+                tools:ignore="MissingConstraints" />
+
+            <ImageButton
+                android:id="@+id/bzero"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="470dp"
+                android:layout_marginStart="470dp"
+                android:layout_marginTop="330dp"
+                android:background="@drawable/bgreen"
+                app:layout_constraintEnd_toStartOf="@+id/ivmap"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/ivmap" />
+
+
+            <ImageButton
+                android:id="@+id/btwo"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="620dp"
+                android:layout_marginStart="620dp"
+                android:layout_marginTop="315dp"
+                android:background="@drawable/bgreen"
+                app:layout_constraintEnd_toStartOf="@+id/ivmap"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/ivmap"
+                tools:ignore="MissingConstraints" />
+
+            <ImageButton
+                android:id="@+id/bthree"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="450dp"
+                android:layout_marginStart="450dp"
+                android:layout_marginTop="340dp"
+                android:background="@drawable/bgreen"
+                app:layout_constraintEnd_toStartOf="@+id/ivmap"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/ivmap"
+                tools:ignore="MissingConstraints" />
+
+            <ImageButton
+                android:id="@+id/bfour"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="540dp"
+                android:layout_marginStart="540dp"
+                android:layout_marginTop="360dp"
+                android:background="@drawable/bgreen"
+                app:layout_constraintEnd_toStartOf="@+id/ivmap"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/ivmap"
+                tools:ignore="MissingConstraints" />
+
+            <ImageButton
+                android:id="@+id/bfive"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="395dp"
+                android:layout_marginStart="395dp"
+                android:layout_marginTop="292dp"
+                android:background="@drawable/bgreen"
+                app:layout_constraintStart_toStartOf="@+id/ivmap"
+                app:layout_constraintTop_toTopOf="@+id/ivmap"
+                tools:ignore="MissingConstraints" />
+
+
+            <ImageView
+                android:id="@+id/plevel1"
+                android:layout_width="22dp"
+                android:layout_height="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/spacecraft"
+                app:layout_constraintBottom_toBottomOf="@+id/bone"
+                app:layout_constraintEnd_toStartOf="@+id/bthree"
+                app:layout_constraintTop_toTopOf="@+id/bzero"
+                app:layout_constraintVertical_bias="1.0"
+                android:rotation="-90"/>
+
+        </android.support.constraint.ConstraintLayout>
     </HorizontalScrollView>
+
+
 </android.support.constraint.ConstraintLayout>

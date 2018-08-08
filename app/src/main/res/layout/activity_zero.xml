@@ -5,27 +5,30 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="@drawable/desert">
+    android:background="@drawable/mesopotamia">
 
     <ImageButton
         android:id="@+id/ladrillo"
         android:layout_width="150dp"
         android:layout_height="80dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
         android:background="@drawable/transparent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/plevel1"
-        app:layout_constraintTop_toBottomOf="@+id/plevel1"
-        app:layout_constraintVertical_bias="0.762" />
+        app:layout_constraintEnd_toEndOf="@+id/ladrillo0"
+        app:layout_constraintTop_toBottomOf="@+id/plevel1" />
 
     <ImageButton
         android:id="@+id/ladrillo0"
-        android:layout_width="325dp"
-        android:layout_height="70dp"
-        android:layout_marginBottom="10dp"
+        android:layout_width="110dp"
+        android:layout_height="10dp"
+        android:layout_marginBottom="80dp"
+        android:layout_marginEnd="225dp"
         android:layout_marginLeft="8dp"
+        android:layout_marginRight="225dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:background="@drawable/ladrillo"
+        android:background="@drawable/stone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -35,26 +38,33 @@
 
     <ImageButton
         android:id="@+id/ladrillo1"
-        android:layout_width="255dp"
-        android:layout_height="70dp"
+        android:layout_width="110dp"
+        android:layout_height="10dp"
+        android:layout_marginBottom="55dp"
+        android:layout_marginEnd="155dp"
         android:layout_marginLeft="8dp"
+        android:layout_marginRight="155dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:background="@drawable/ladrillo"
+        android:background="@drawable/stone"
         app:layout_constraintBottom_toTopOf="@+id/ladrillo0"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
+
     <ImageButton
         android:id="@+id/ladrillo2"
-        android:layout_width="180dp"
-        android:layout_height="70dp"
+        android:layout_width="110dp"
+        android:layout_height="10dp"
+        android:layout_marginBottom="55dp"
+        android:layout_marginEnd="80dp"
         android:layout_marginLeft="8dp"
+        android:layout_marginRight="80dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:background="@drawable/ladrillo"
+        android:background="@drawable/stone"
         app:layout_constraintBottom_toTopOf="@+id/ladrillo1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -64,12 +74,15 @@
 
     <ImageButton
         android:id="@+id/ladrillo3"
-        android:layout_width="115dp"
-        android:layout_height="70dp"
+        android:layout_width="110dp"
+        android:layout_height="10dp"
+        android:layout_marginBottom="55dp"
+        android:layout_marginEnd="15dp"
         android:layout_marginLeft="8dp"
+        android:layout_marginRight="15dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:background="@drawable/ladrillo"
+        android:background="@drawable/stone"
         app:layout_constraintBottom_toTopOf="@+id/ladrillo2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -79,12 +92,13 @@
 
     <ImageButton
         android:id="@+id/ladrillo4"
-        android:layout_width="45dp"
-        android:layout_height="70dp"
+        android:layout_width="55dp"
+        android:layout_height="10dp"
+        android:layout_marginBottom="55dp"
         android:layout_marginLeft="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:background="@drawable/ladrillo"
+        android:background="@drawable/stone"
         app:layout_constraintBottom_toTopOf="@+id/ladrillo3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -94,8 +108,9 @@
 
     <ImageButton
         android:id="@+id/ladrillo5"
-        android:layout_width="0.1dp"
-        android:layout_height="70dp"
+        android:layout_width="1dp"
+        android:layout_height="15dp"
+        android:layout_marginBottom="50dp"
         android:layout_marginLeft="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
@@ -107,6 +122,37 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
+
+    <ImageView
+        android:layout_width="10dp"
+        android:layout_height="500dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/stone"
+        android:rotation="47"
+        app:layout_constraintBottom_toBottomOf="@+id/ladrillo0"
+        app:layout_constraintEnd_toEndOf="@+id/ladrillo2"
+        app:layout_constraintStart_toStartOf="@+id/ladrillo0"
+        app:layout_constraintTop_toTopOf="@+id/ladrillo4" />
+
+    <ImageView
+        android:layout_width="10dp"
+        android:layout_height="425dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="125dp"
+        android:layout_marginRight="125dp"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/stone"
+        android:rotation="47"
+        app:layout_constraintBottom_toBottomOf="@+id/ladrillo0"
+        app:layout_constraintEnd_toEndOf="@+id/ladrillo3"
+        app:layout_constraintStart_toStartOf="@+id/ladrillo3"
+        app:layout_constraintTop_toTopOf="@+id/ladrillo4" />
+
 
     <ImageView
         android:id="@+id/plevel1"

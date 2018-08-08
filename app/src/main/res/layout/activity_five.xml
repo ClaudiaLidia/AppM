@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/towerpisa">
+
+    <ImageButton
+        android:id="@+id/ladrillo"
+        android:layout_width="150dp"
+        android:layout_height="80dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/transparent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/ladrillo0"
+        app:layout_constraintTop_toBottomOf="@+id/plevel1" />
+
+    <ImageButton
+        android:id="@+id/ladrillo0"
+        android:layout_width="70dp"
+        android:layout_height="9dp"
+        android:layout_marginBottom="85dp"
+        android:layout_marginEnd="55dp"
+        android:layout_marginRight="55dp"
+        android:background="@drawable/acensor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.894" />
+
+    <ImageButton
+        android:id="@+id/ladrillo1"
+        android:layout_width="70dp"
+        android:layout_height="10dp"
+        android:layout_marginBottom="68dp"
+        android:layout_marginEnd="55dp"
+        android:layout_marginRight="55dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/acensor"
+        app:layout_constraintBottom_toTopOf="@+id/ladrillo0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.991" />
+
+    <ImageButton
+        android:id="@+id/ladrillo2"
+        android:layout_width="70dp"
+        android:layout_height="10dp"
+        android:layout_marginBottom="68dp"
+        android:layout_marginEnd="55dp"
+        android:layout_marginRight="55dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/acensor"
+        app:layout_constraintBottom_toTopOf="@+id/ladrillo1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageButton
+        android:id="@+id/ladrillo3"
+        android:layout_width="70dp"
+        android:layout_height="10dp"
+        android:layout_marginBottom="68dp"
+        android:layout_marginEnd="55dp"
+        android:layout_marginRight="55dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/acensor"
+        app:layout_constraintBottom_toTopOf="@+id/ladrillo2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageButton
+        android:id="@+id/ladrillo4"
+        android:layout_width="70dp"
+        android:layout_height="10dp"
+        android:layout_marginBottom="68dp"
+        android:layout_marginEnd="55dp"
+        android:layout_marginRight="55dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/acensor"
+        app:layout_constraintBottom_toTopOf="@+id/ladrillo3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageButton
+        android:id="@+id/ladrillo5"
+        android:layout_width="70dp"
+        android:layout_height="10dp"
+        android:layout_marginBottom="68dp"
+        android:layout_marginEnd="55dp"
+        android:layout_marginRight="55dp"
+        android:background="@drawable/acensor"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/ladrillo4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="70dp"
+        android:layout_height="510dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="68dp"
+        android:background="@drawable/acensor"
+        android:rotation="180"
+        app:layout_constraintBottom_toBottomOf="@+id/ladrillo0"
+        app:layout_constraintEnd_toEndOf="@+id/ladrillo1"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/ladrillo1"
+        app:layout_constraintTop_toTopOf="@+id/ladrillo4"
+        app:layout_constraintVertical_bias="0.622" />
+
+    <ImageView
+        android:id="@+id/plevel1"
+        android:layout_width="52dp"
+        android:layout_height="68dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/acensor"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="@+id/ladrillo0"
+        app:layout_constraintStart_toStartOf="@+id/ladrillo0"
+        app:layout_constraintTop_toBottomOf="@+id/ladrillo0" />
+
+
+    <ImageView
+        android:id="@+id/plevel"
+        android:layout_width="52dp"
+        android:layout_height="68dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/player"
+        app:layout_constraintBottom_toBottomOf="@+id/plevel1"
+        app:layout_constraintEnd_toEndOf="@+id/plevel1"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/plevel1"
+        app:layout_constraintTop_toTopOf="@+id/plevel1"
+        app:layout_constraintVertical_bias="1.0" />
+
+
+</android.support.constraint.ConstraintLayout>
