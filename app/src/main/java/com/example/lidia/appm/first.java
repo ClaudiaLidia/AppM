@@ -22,7 +22,7 @@ public class first extends Activity implements View.OnClickListener{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_first);
 
         dbDataSource = new DBDataSource(getApplicationContext());
 
