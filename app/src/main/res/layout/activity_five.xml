@@ -6,6 +6,17 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     android:background="@drawable/towerpisa">
+    <pl.droidsonroids.gif.GifTextView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/solnuve"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
     <ImageButton
         android:id="@+id/ladrillo"

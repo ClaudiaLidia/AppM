@@ -7,6 +7,17 @@
     tools:context=".MainActivity"
     android:background="@drawable/desert">
 
+    <pl.droidsonroids.gif.GifTextView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="108dp"
+        android:background="@drawable/escorpion"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ladrillo3" />
+
     <ImageButton
         android:id="@+id/ladrillo"
         android:layout_width="150dp"
