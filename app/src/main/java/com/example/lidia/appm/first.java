@@ -1,6 +1,7 @@
 package com.example.lidia.appm;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
@@ -120,19 +121,19 @@ public class first extends Activity implements View.OnClickListener{
            public void run() {
                left.setBackgroundColor(Color.parseColor("#F0F0F0"));
                right.setBackgroundColor(Color.parseColor("#F0F0F0"));
-               if(complete == 5) {
-
-//saltar a otra fase
-                   complete =0;
-                   bottom.setText(complete+" /5");
-               } else {
-
-                   hola();
-               }
-           }
+                          }
        },500);
 
+        if(complete == 5) {
+            //saltar a otra fase
+            Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent);
+            complete =0;
+            bottom.setText(complete+" /5");
+        } else {
 
+            hola();
+        }
 
 
     }

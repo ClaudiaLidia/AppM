@@ -3,6 +3,7 @@ package com.example.lidia.appm;
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -72,10 +73,10 @@ public class MainActivity extends Activity implements View.OnClickListener {
     @Override
     public void onClick(View view) {
 
-            for(int i=0; i<6;i++) {
+            //for(int i=0; i<6;i++) {
 
-            if (view.getId() == LEVELS[i]) {
-                if( msg.equals("bfive")){
+            if (view.getId() == LEVELS[1]) {
+              /*  if( msg.equals("bfive")){
                     ImageButton iv=(ImageButton) findViewById(LEVELS[i+1]);
                     handleAnimation(imageview,  iv.getLeft()+20, iv.getTop()+30);
                     handleAnimation(image,  iv.getLeft()+20, iv.getTop()+30);
@@ -85,9 +86,12 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 } else{
                     ImageButton iv = (ImageButton) findViewById(LEVELS[i + 1]);
                     handleAnimation(imageview, iv.getLeft() - 150, iv.getTop());
+                    }*/
 
-                    }
-        }
+                Intent intent = new Intent(this, first.class);
+                startActivity(intent);
+
+       // }
 
             }
             }
