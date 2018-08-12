@@ -20,6 +20,7 @@ public class first extends Activity implements View.OnClickListener{
     TextView bottom;
     int complete= 0;
     String msg;
+
     List<QUESTIONS> question;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,7 +62,7 @@ public class first extends Activity implements View.OnClickListener{
 
             position = rnd.nextInt(2);
             int answer = rnd.nextInt(2);
-            int mistake = rnd.nextInt(2);
+            int mistake = rnd.nextInt(3);
 
 
             write(position, answer, mistake, i);
@@ -82,6 +83,8 @@ public class first extends Activity implements View.OnClickListener{
                 left.setText(question.get(i).getMistake1());
             }else if(mistake==1){
                 left.setText(question.get(i).getMistake2());
+            }else if(mistake==2){
+                left.setText(question.get(i).getWrong_Solution());
             }
         }else if (position == 1) {
             if(answer == 0) {
@@ -94,6 +97,8 @@ public class first extends Activity implements View.OnClickListener{
                 right.setText(question.get(i).getMistake1());
             }else if(mistake==1){
                 right.setText(question.get(i).getMistake2());
+            }else if(mistake==2){
+                right.setText(question.get(i).getWrong_Solution());
             }
         }
         listener();
@@ -131,6 +136,8 @@ public class first extends Activity implements View.OnClickListener{
         Bundle extras = getIntent().getExtras();
         msg = extras.getString("keyMessage");
         intent.putExtra("keyMessage", msg);
+        int count=3;
+        intent.putExtra("counter", count);
         new Handler().postDelayed(new Runnable() {
 
             @Override

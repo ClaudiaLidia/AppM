@@ -123,9 +123,7 @@
         android:id="@+id/plevel1"
         android:layout_width="52dp"
         android:layout_height="78dp"
-        android:background="@drawable/player"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/ladrillo0" />
+        android:background="@drawable/player" />
 
 
 </android.support.constraint.ConstraintLayout>

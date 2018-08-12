@@ -16,6 +16,7 @@ public class MapActivity extends Activity implements View.OnClickListener {
     long animationDuration=1500;
     Integer[] BUTTONS;
     ImageButton button;
+    int count=2;
 
 
     @Override
@@ -62,6 +63,7 @@ public class MapActivity extends Activity implements View.OnClickListener {
                     final Intent intent = new Intent(this, MainActivity.class);
                     String msg = getResources().getResourceEntryName(view.getId());
                     intent.putExtra("keyMessage", msg);
+                    intent.putExtra("counter", count);
                     new Handler().postDelayed(new Runnable() {
 
                         @Override
@@ -69,6 +71,7 @@ public class MapActivity extends Activity implements View.OnClickListener {
                             startActivity(intent);
                         }
                     }, 1500);
+
 
                 }
     }

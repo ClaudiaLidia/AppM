@@ -11,15 +11,14 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 
-public class MainActivity extends Activity implements View.OnClickListener {
+public class MainActivity extends Activity {
     ImageView imageview, image;
     long animationDuration=1000;
     Integer[] LEVELS;
     String [] CLASSES;
     String msg;
-    ImageButton button;
-    String first;
-
+    int count=2;
+    int initial;
 
 
     @Override
@@ -27,7 +26,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
         super.onCreate(savedInstanceState);
         Bundle extras = getIntent().getExtras();
         msg = extras.getString("keyMessage");
-
+        count= extras.getInt("counter");
         if(msg.equals("bzero")){
             setContentView(R.layout.activity_zero);
         } else if(msg.equals("bone")){
@@ -42,12 +41,44 @@ public class MainActivity extends Activity implements View.OnClickListener {
             setContentView(R.layout.activity_five);
         }
         imageview=(ImageView)findViewById(R.id.plevel1);
-        image=(ImageView)findViewById(R.id.plevel);
-        CLASSES= new String []{first};
-        LEVELS = new Integer[]{R.id.ladrillo, R.id.ladrillo0, R.id.ladrillo1,R.id.ladrillo2,R.id.ladrillo3, R.id.ladrillo4, R.id.ladrillo5};
 
-        ImageButton iv = (ImageButton) findViewById(LEVELS[1]);
-        handleAnimation(imageview, iv.getLeft() - 150, iv.getTop());
+        image=(ImageView)findViewById(R.id.plevel);
+        LEVELS= new Integer[]{R.id.ladrillo,R.id.ladrillo0, R.id.ladrillo1, R.id.ladrillo2, R.id.ladrillo3, R.id.ladrillo4, R.id.ladrillo5};
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                Log.i("fff", "fff"+initial +"  "+count);
+                initial= count-1;
+                Log.i("fff", "after"+initial +"  "+count);
+
+                ImageButton iv1 = (ImageButton) findViewById(LEVELS[initial]);
+        imageview.setY(iv1.getTop());
+        imageview.setX(iv1.getLeft()-150);
+
+        Log.i("ddd","kkkk"+iv1.getTop());
+        Log.i("ddd","dddd"+iv1.getLeft());
+        }
+        }, 10);
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+
+                ImageButton iv = (ImageButton) findViewById( LEVELS[count]);
+                handleAnimation(imageview, iv.getLeft() - 150, iv.getTop());
+                Log.i("ddd","kkkk"+iv.getTop());
+                Log.i("ddd","dddd"+iv.getLeft());
+
+            }
+        }, 1000);
+
+            final Intent intent = new Intent(this, first.class);
+            intent.putExtra("keyMessage", msg);
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    startActivity(intent);
+                }
+            }, 2000);
 
     }
 
@@ -57,7 +88,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
         animatorX.setDuration(animationDuration);
 
         AnimatorSet animatorSet= new AnimatorSet();
-        animatorSet.playTogether(animatorX, animatorY); //rotateAnimation
+        animatorSet.playTogether(animatorX, animatorY);
         animatorSet.start();
     }
 
@@ -74,42 +105,6 @@ public class MainActivity extends Activity implements View.OnClickListener {
         animatorSet.start();
     }
 
-    @Override
-    public void onClick(View view) {
-
-            for(int i=0; i<6;i++) {
-
-                if (view.getId() == LEVELS[i]) {
-                    if (msg.equals("bfive")) {
-                        ImageButton iv = (ImageButton) findViewById(LEVELS[i + 1]);
-                        handleAnimation(imageview, iv.getLeft() + 20, iv.getTop() + 30);
-                        handleAnimation(image, iv.getLeft() + 20, iv.getTop() + 30);
-                    } else if (msg.equals("bfour")) {
-                        ImageButton iv = (ImageButton) findViewById(LEVELS[i + 1]);
-                        handleAnimation(imageview, iv.getLeft() + 20, iv.getTop());
-                    } else {
-                        ImageButton iv = (ImageButton) findViewById(LEVELS[i + 1]);
-                        handleAnimation(imageview, iv.getLeft() - 150, iv.getTop());
-
-                        }
-
-                    }
-
-
-                }
-        if (view.getId() == R.id.ladrillo0){
-            final Intent intent = new Intent(this, first.class);
-            intent.putExtra("keyMessage", msg);
-            new Handler().postDelayed(new Runnable() {
-                @Override
-                public void run() {
-                    startActivity(intent);
-                }
-            }, 1500);
-        }
-
-
-                }
             }
 
 

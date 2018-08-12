@@ -133,31 +133,14 @@
         android:id="@+id/plevel1"
         android:layout_width="52dp"
         android:layout_height="68dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
-        android:background="@drawable/acensor"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView"
-        app:layout_constraintEnd_toEndOf="@+id/ladrillo0"
-        app:layout_constraintStart_toStartOf="@+id/ladrillo0"
-        app:layout_constraintTop_toBottomOf="@+id/ladrillo0" />
+        android:background="@drawable/acensor" />
 
 
     <ImageView
         android:id="@+id/plevel"
         android:layout_width="52dp"
         android:layout_height="68dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/player"
-        app:layout_constraintBottom_toBottomOf="@+id/plevel1"
-        app:layout_constraintEnd_toEndOf="@+id/plevel1"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/plevel1"
-        app:layout_constraintTop_toTopOf="@+id/plevel1"
-        app:layout_constraintVertical_bias="1.0" />
+        android:background="@drawable/player" />
 
 
 </android.support.constraint.ConstraintLayout>
