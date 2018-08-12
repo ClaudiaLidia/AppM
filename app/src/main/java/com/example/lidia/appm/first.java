@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -18,6 +19,7 @@ public class first extends Activity implements View.OnClickListener{
     int position=100;
     TextView bottom;
     int complete= 0;
+    String msg;
     List<QUESTIONS> question;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -100,43 +102,51 @@ public class first extends Activity implements View.OnClickListener{
     @Override
     public void onClick(View view) {
 
-        if(position==0 && view.getId()==R.id.right){
-           complete++;
+        if (position == 0 && view.getId() == R.id.right) {
+            complete++;
             right.setBackgroundColor(Color.GREEN);
-        }else if(position==1 && view.getId()==R.id.left){
+        } else if (position == 1 && view.getId() == R.id.left) {
             complete++;
             left.setBackgroundColor(Color.GREEN);
-        }else if(position==1 && view.getId()==R.id.right){
+        } else if (position == 1 && view.getId() == R.id.right) {
             complete = 0;
             right.setBackgroundColor(Color.RED);
-        }else if(position==0 && view.getId()==R.id.left){
-            complete=0;
+        } else if (position == 0 && view.getId() == R.id.left) {
+            complete = 0;
             left.setBackgroundColor(Color.RED);
         }
 
-        bottom.setText(complete+" /5");
+        bottom.setText(complete + " /5");
 
-       new Handler().postDelayed(new Runnable() {
-           @Override
-           public void run() {
-               left.setBackgroundColor(Color.parseColor("#F0F0F0"));
-               right.setBackgroundColor(Color.parseColor("#F0F0F0"));
-                          }
-       },500);
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                left.setBackgroundColor(Color.parseColor("#F0F0F0"));
+                right.setBackgroundColor(Color.parseColor("#F0F0F0"));
+            }
+        }, 500);
 
-        if(complete == 5) {
-            //saltar a otra fase
-            Intent intent = new Intent(this, MainActivity.class);
-            startActivity(intent);
-            complete =0;
-            bottom.setText(complete+" /5");
-        } else {
+        //saltar a otra fase
+        final Intent intent = new Intent(this, MainActivity.class);
+        Bundle extras = getIntent().getExtras();
+        msg = extras.getString("keyMessage");
+        intent.putExtra("keyMessage", msg);
+        new Handler().postDelayed(new Runnable() {
 
-            hola();
-        }
+            @Override
+            public void run() {
+                if (complete == 5){
+                    // if you are redirecting from a fragment then use getActivity() as the context.
+                    startActivity(intent);
 
+                }else{
+                    hola();
+                }
+            }
+        }, 1500);
 
-    }
+            }
+
 
     @Override
     protected void onStop() {

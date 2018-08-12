@@ -7,7 +7,7 @@
     tools:context=".MainActivity"
     android:background="@drawable/tajmahala">
 
-    <ImageButton
+    <ImageView
         android:id="@+id/ladrillo"
         android:layout_width="150dp"
         android:layout_height="100dp"

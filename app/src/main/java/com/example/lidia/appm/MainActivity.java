@@ -5,6 +5,7 @@ import android.animation.ObjectAnimator;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
@@ -14,8 +15,10 @@ public class MainActivity extends Activity implements View.OnClickListener {
     ImageView imageview, image;
     long animationDuration=1000;
     Integer[] LEVELS;
+    String [] CLASSES;
     String msg;
     ImageButton button;
+    String first;
 
 
 
@@ -40,11 +43,12 @@ public class MainActivity extends Activity implements View.OnClickListener {
         }
         imageview=(ImageView)findViewById(R.id.plevel1);
         image=(ImageView)findViewById(R.id.plevel);
+        CLASSES= new String []{first};
         LEVELS = new Integer[]{R.id.ladrillo, R.id.ladrillo0, R.id.ladrillo1,R.id.ladrillo2,R.id.ladrillo3, R.id.ladrillo4, R.id.ladrillo5};
-        for(int i=0; i<6;i++){
-            button = (ImageButton) findViewById(LEVELS[i]);
-            button.setOnClickListener(this);
-        }
+
+        ImageButton iv = (ImageButton) findViewById(LEVELS[1]);
+        handleAnimation(imageview, iv.getLeft() - 150, iv.getTop());
+
     }
 
     public void handleAnimation(View view, float xposition, float iposition){
@@ -73,27 +77,49 @@ public class MainActivity extends Activity implements View.OnClickListener {
     @Override
     public void onClick(View view) {
 
-            //for(int i=0; i<6;i++) {
+            for(int i=0; i<6;i++) {
 
-            if (view.getId() == LEVELS[1]) {
-              /*  if( msg.equals("bfive")){
-                    ImageButton iv=(ImageButton) findViewById(LEVELS[i+1]);
-                    handleAnimation(imageview,  iv.getLeft()+20, iv.getTop()+30);
-                    handleAnimation(image,  iv.getLeft()+20, iv.getTop()+30);
-            } else if (msg.equals("bfour")){
-                    ImageButton iv=(ImageButton) findViewById(LEVELS[i+1]);
-                    handleAnimation(imageview,  iv.getLeft()+20, iv.getTop());
-                } else{
-                    ImageButton iv = (ImageButton) findViewById(LEVELS[i + 1]);
-                    handleAnimation(imageview, iv.getLeft() - 150, iv.getTop());
-                    }*/
+                if (view.getId() == LEVELS[i]) {
+                    if (msg.equals("bfive")) {
+                        ImageButton iv = (ImageButton) findViewById(LEVELS[i + 1]);
+                        handleAnimation(imageview, iv.getLeft() + 20, iv.getTop() + 30);
+                        handleAnimation(image, iv.getLeft() + 20, iv.getTop() + 30);
+                    } else if (msg.equals("bfour")) {
+                        ImageButton iv = (ImageButton) findViewById(LEVELS[i + 1]);
+                        handleAnimation(imageview, iv.getLeft() + 20, iv.getTop());
+                    } else {
+                        ImageButton iv = (ImageButton) findViewById(LEVELS[i + 1]);
+                        handleAnimation(imageview, iv.getLeft() - 150, iv.getTop());
 
-                Intent intent = new Intent(this, first.class);
-                startActivity(intent);
+                        }
 
-       // }
+                    }
 
+
+                }
+        if (view.getId() == R.id.ladrillo0){
+            final Intent intent = new Intent(this, first.class);
+            intent.putExtra("keyMessage", msg);
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    startActivity(intent);
+                }
+            }, 1500);
+        }
+
+
+                }
             }
-            }
-    }
+
+
+
+
+
+
+
+
+
+
+
 

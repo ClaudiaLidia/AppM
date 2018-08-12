@@ -61,7 +61,6 @@ public class MapActivity extends Activity implements View.OnClickListener {
                 if(view.getId()==R.id.bzero||view.getId()== R.id.bone||view.getId()== R.id.btwo||view.getId()==R.id.bthree||view.getId()==R.id.bfour||view.getId()==R.id.bfive) {
                     final Intent intent = new Intent(this, MainActivity.class);
                     String msg = getResources().getResourceEntryName(view.getId());
-                    Log.i("hola", "hola" + msg);
                     intent.putExtra("keyMessage", msg);
                     new Handler().postDelayed(new Runnable() {
 
