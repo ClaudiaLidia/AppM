@@ -13,7 +13,7 @@ import java.io.InputStream;
 import java.io.OutputStream;
 
 class MySQLiteHelper extends SQLiteOpenHelper {
-    public static final String DB_NAME = "Eq2.db";
+    public static final String DB_NAME = "Eq7.db";
 
     public static  final String DB_VERSION_KEY = "db_ver";
     public  static final int DB_VERSION = 1;
@@ -21,7 +21,7 @@ class MySQLiteHelper extends SQLiteOpenHelper {
     public static final String FINAL_TABLE = "Question";
 
     public enum FinalColum {
-        question, answer1, mistake1, mistake2, solution, wrong_solution;
+        question, answer1, mistake1, mistake2, solution, wrong_solution, solution1;
 
         public static String[] questionss(){
             FinalColum[] v= values();

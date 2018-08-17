@@ -76,6 +76,9 @@ public class DBDataSource {
         String wrong_solution = cursor.getString(MySQLiteHelper.FinalColum.wrong_solution.ordinal());
         p.setWrong_Solution(wrong_solution);
 
+        String solution1 = cursor.getString(MySQLiteHelper.FinalColum.solution1.ordinal());
+        p.setSolution1(solution1);
+
         return p;
     }
 }

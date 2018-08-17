@@ -7,6 +7,7 @@ class QUESTIONS {
     private String mistake2;
     private String solution;
     private String wrong_solution;
+    private String solution1;
 
 
 
@@ -35,6 +36,9 @@ class QUESTIONS {
         this.wrong_solution = wrong_solution;
     }
 
+    public void setSolution1(String solution1) {
+        this.solution1 = solution1;
+    }
 
 
     public String getQuestion() {
@@ -61,15 +65,20 @@ class QUESTIONS {
         return wrong_solution;
     }
 
+    public String getSolution1() {
+        return solution1;
+    }
+
 
     QUESTIONS(){}
-    public QUESTIONS(String question, String answer1, String answer2, String mistake1, String mistake2, String mistake3, String mistake4, String solution, String wrong_solution){
+    public QUESTIONS(String question, String answer1, String answer2, String mistake1, String mistake2, String mistake3, String mistake4, String solution, String wrong_solution, String solution1){
         this.question=question;
         this.answer1=answer1;
         this.mistake1=mistake1;
         this.mistake2=mistake2;
         this.solution=solution;
         this.wrong_solution=wrong_solution;
+        this.solution1=solution1;
     }
 
     @Override

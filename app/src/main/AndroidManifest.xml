@@ -22,6 +22,7 @@
         <activity android:name=".MapActivity" android:screenOrientation="portrait"></activity>
         <activity android:name=".first" android:screenOrientation="portrait"></activity>
         <activity android:name=".second" android:screenOrientation="portrait"></activity>
+        <activity android:name=".fifth" android:screenOrientation="portrait"></activity>
 
     </application>
 
